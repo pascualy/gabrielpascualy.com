@@ -1,6 +1,6 @@
 # gabrielpascualy.com
 
-Route 53 reported this domain available on September 30, 2026. Its registration and renewal price is $16/year. Route 53 DNS adds $0.50/month for one hosted zone, plus query charges and applicable taxes. Registration remains pending purchase approval and registrant contact details.
+Route 53 reported this domain available on September 30, 2026. Its registration and renewal price is $16/year. Route 53 DNS adds $0.50/month for one hosted zone, plus query charges and applicable taxes. Registration remains pending registrant contact details. The planned setup uses a one-year registration, annual renewal, and contact privacy.
 
 ## Connection plan
 
