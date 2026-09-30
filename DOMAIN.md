@@ -1,8 +1,10 @@
 # gabrielpascualy.com
 
-Route 53 reported this domain available on September 30, 2026. Its registration and renewal price is $16/year. Route 53 DNS adds $0.50/month for one hosted zone, plus query charges and applicable taxes. Registration remains pending registrant contact details. The planned setup uses a one-year registration, annual renewal, and contact privacy.
+The domain was registered through Route 53 on September 30, 2026 and expires on September 30, 2027. Annual renewal and privacy for all registration contacts are enabled; contact email verification is complete. The verified registration and renewal price at setup was $16/year. Route 53 DNS adds $0.50/month for one hosted zone, plus query charges and applicable taxes.
 
-## Connection plan
+The site is connected to GitHub Pages at [https://gabrielpascualy.com/](https://gabrielpascualy.com/). The root and `www` DNS records pass GitHub's checks, its certificate covers both names, and HTTPS enforcement is enabled.
+
+## Connection reference
 
 1. Register the exact domain for one year with contact privacy enabled. Confirm the registrant email if AWS requests it.
 2. Use the hosted zone Route 53 creates during registration; do not create a duplicate zone.
@@ -19,4 +21,4 @@ Route 53 reported this domain available on September 30, 2026. Its registration 
 
 These addresses come from [GitHub's custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). Registration steps and the automatically created hosted zone are described in [AWS's domain-registration documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html).
 
-The site can publish at its GitHub Pages address while the domain connection is in progress. Domain registration, DNS propagation, and certificate issuance may finish at different times.
+Future website changes publish automatically from `main`. GitHub Pages manages the HTTPS certificate; Route 53 manages registration and DNS. Keep the domain's name servers synchronized with its existing hosted zone if you change the DNS setup.

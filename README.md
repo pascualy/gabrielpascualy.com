@@ -46,13 +46,13 @@ npm run preview
 
 GitHub Pages is configured to deploy from `.github/workflows/publish.yml`. Every build reads the current Pages address from GitHub, so links, metadata, RSS, and sitemap adapt when the custom domain is connected.
 
-The live address is `https://pascualy.github.io/gabrielpascualy.com/`. The planned domain is `gabrielpascualy.com`, pending registration contact details, registration, and DNS setup.
+The live address is [gabrielpascualy.com](https://gabrielpascualy.com/). The `www` address redirects to it, and GitHub Pages enforces HTTPS. The domain is registered through Route 53 with annual renewal and contact privacy enabled.
 
-For a local build that matches the initial address:
+For a local build that matches the live address:
 
 ```sh
-SITE_ORIGIN=https://pascualy.github.io BASE_PATH=/gabrielpascualy.com npm run build
-SITE_ORIGIN=https://pascualy.github.io BASE_PATH=/gabrielpascualy.com npm run verify
+SITE_ORIGIN=https://gabrielpascualy.com BASE_PATH=/ npm run build
+SITE_ORIGIN=https://gabrielpascualy.com BASE_PATH=/ npm run verify
 ```
 
 ## Editing the site
