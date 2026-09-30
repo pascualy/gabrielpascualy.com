@@ -1,0 +1,32 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { publishedPosts, pathFor, formatDate, readingMinutes } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  return (await publishedPosts()).map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+interface Props { post: CollectionEntry<'posts'> }
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Base title={`${post.data.title} — Gabriel Pascualy`} description={post.data.description} article date={post.data.date}>
+  <article class="article-page">
+    <a class="back-link" href={pathFor()}>All writing</a>
+    <header class="article-header">
+      <div class="post-meta">
+        <span>{post.data.type}</span>
+        <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatDate(post.data.date)}</time>
+        <span>{readingMinutes(post.body)} min read</span>
+      </div>
+      <h1>{post.data.title}</h1>
+      <p class="article-description">{post.data.description}</p>
+    </header>
+    <div class="prose"><Content /></div>
+    <aside class="article-end">
+      <span>Gabriel Pascualy</span>
+      <a href="https://x.com/gpascualy">Find me on Twitter / X</a>
+    </aside>
+  </article>
+</Base>
