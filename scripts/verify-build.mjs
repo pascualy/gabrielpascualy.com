@@ -5,7 +5,7 @@ import { join, basename } from 'node:path';
 const root = 'dist';
 const origin = process.env.SITE_ORIGIN || 'https://pascualy.github.io';
 const base = (process.env.BASE_PATH || '').replace(/\/$/, '');
-const expected = ['index.html', 'about/index.html', '404.html', 'rss.xml', 'sitemap.xml', 'robots.txt', 'favicon.svg', 'images/gabriel-pascualy.png'];
+const expected = ['index.html', '404.html', 'rss.xml', 'sitemap.xml', 'robots.txt', 'favicon.svg', 'images/gabriel-pascualy.png'];
 for (const file of expected) assert.ok(existsSync(join(root, file)), `Missing ${file}`);
 
 function filesIn(directory) {
@@ -34,7 +34,7 @@ for (const file of htmlFiles) {
 const rss = readFileSync(join(root, 'rss.xml'), 'utf8');
 const sitemap = readFileSync(join(root, 'sitemap.xml'), 'utf8');
 assert.ok(rss.includes(`${origin}${base}/rss.xml`), 'RSS has the wrong address');
-assert.ok(sitemap.includes(`${origin}${base}/about/`), 'Sitemap is missing About');
+assert.ok(!sitemap.includes(`${origin}${base}/about/`), 'Removed About page is still in the sitemap');
 assert.ok(readFileSync(join(root, 'robots.txt'), 'utf8').includes(`${origin}${base}/sitemap.xml`));
 
 for (const file of filesIn('src/content/posts').filter((path) => path.endsWith('.md'))) {

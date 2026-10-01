@@ -10,11 +10,10 @@ interface Props {
 }
 const {
   title = 'Gabriel Pascualy — Product, AI, and reliable software',
-  description = 'Notes from Gabriel Pascualy, Head of Product at Ketryx, on product judgment, AI, and building software people can rely on.',
+  description = 'Gabriel Pascualy. Building Ketryx and writing about AI, product, and software development.',
   article = false, date,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const active = Astro.url.pathname.endsWith('/about/') ? 'about' : 'writing';
 ---
 <!doctype html>
 <html lang="en">
@@ -47,7 +46,7 @@ const active = Astro.url.pathname.endsWith('/about/') ? 'about' : 'writing';
           <img src={pathFor('images/gabriel-pascualy.png')} alt="Gabriel Pascualy" width="460" height="460" class="portrait" fetchpriority="high" />
           <span class="name">Gabriel<br class="desktop-break" /> Pascualy<span class="name-period">.</span></span>
         </a>
-        <p class="role">Head of Product at <a href="https://www.ketryx.com/">Ketryx</a></p>
+        <p class="role">Building <a href="https://www.ketryx.com/">Ketryx</a></p>
         <p class="identity-note">Building AI for teams developing regulated software.</p>
         <div class="social-links">
           <a href="https://x.com/gpascualy">Twitter / X</a>
@@ -60,8 +59,7 @@ const active = Astro.url.pathname.endsWith('/about/') ? 'about' : 'writing';
       <div class="content-column">
         <header class="site-header">
           <nav aria-label="Main navigation">
-            <a href={pathFor()} aria-current={active === 'writing' ? 'page' : undefined}>Writing</a>
-            <a href={pathFor('about/')} aria-current={active === 'about' ? 'page' : undefined}>About</a>
+            <a href={pathFor()} aria-current={Astro.url.pathname === pathFor() ? 'page' : undefined}>Writing</a>
           </nav>
           <a class="feed-link" href={pathFor('rss.xml')}>RSS feed</a>
         </header>

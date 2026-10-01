@@ -67,8 +67,6 @@ h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 4.2vw
 .work-note a { font-size: .875rem; }
 .site-footer { margin-top: 72px; padding-top: 19px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; font-size: .75rem; color: var(--muted); }
 .site-footer a { text-decoration-color: #aeb6c3; }
-.about-page { padding-top: 61px; }
-.about-page h1 { margin-bottom: 34px; }
 .prose { font-family: var(--serif); font-size: 1.125rem; line-height: 1.85; }
 .prose p { margin: 0 0 1.4em; }
 .prose .lead { font-size: 1.3rem; line-height: 1.65; color: var(--ink); }
@@ -85,9 +83,6 @@ h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 4.2vw
 .prose th, .prose td { text-align: left; border-bottom: 1px solid var(--line); padding: 10px 15px; }
 .prose hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
 .prose img { height: auto; border-radius: 5px; margin: 1.5em 0; }
-.about-links { padding: 0 !important; margin-top: 18px !important; list-style: none; font-family: var(--sans); font-size: 1rem; }
-.about-links li { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); }
-.about-links span { font-size: .875rem; color: var(--muted); }
 .article-page { padding-top: 32px; }
 .back-link { font-size: .875rem; color: var(--muted); }
 .article-header { margin-top: 41px; padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
@@ -117,7 +112,7 @@ h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 4.2vw
   .identity-rule, .small-note { display: none; }
   .site-header { min-height: 45px; }
   .site-header a { min-height: 44px; padding-top: 8px; }
-  .introduction, .about-page { padding-top: 38px; }
+  .introduction { padding-top: 38px; }
   .introduction { padding-bottom: 39px; }
   h1 { font-size: clamp(2.15rem, 8.3vw, 3.1rem); }
   .intro-copy { margin-top: 22px; font-size: 1rem; }
