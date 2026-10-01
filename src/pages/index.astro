@@ -4,15 +4,9 @@ import { publishedPosts, pathFor, formatDate, readingMinutes } from '../lib/post
 const posts = await publishedPosts();
 ---
 <Base>
-  <section class="introduction" aria-labelledby="intro-title">
-    <h1 id="intro-title">Hi, I’m Gabriel.</h1>
-    <p class="intro-copy">I lead product at <a href="https://www.ketryx.com/">Ketryx</a>, where we build AI for teams developing regulated software.</p>
-    <p class="intro-copy">My work brings together product, engineering, and quality. I’m interested in how people use AI in complex workflows, how they decide what to trust, and how we make useful software easier to build.</p>
-  </section>
-
   <section class="writing-section" aria-labelledby="writing-title">
     <div class="section-heading">
-      <h2 id="writing-title">Writing</h2>
+      <h1 id="writing-title">Writing</h1>
       <span class="section-caption">Essays & working notes</span>
     </div>
     <ol class="post-list">
