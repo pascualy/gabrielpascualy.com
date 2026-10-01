@@ -32,7 +32,7 @@ img { display: block; max-width: 100%; }
 .role { font-size: .9375rem; line-height: 1.65; margin: 9px 0 0; }
 .role a { text-decoration-color: #9ca7ba; }
 .identity-note { color: var(--muted); font-size: .9375rem; line-height: 1.65; margin: 23px 0 0; max-width: 22ch; }
-.social-links { display: flex; gap: 17px; margin-top: 26px; font-size: .875rem; }
+.social-links { display: flex; flex-wrap: wrap; gap: 8px 17px; margin-top: 26px; font-size: .875rem; }
 .social-links a { text-decoration: none; border-bottom: 1px solid var(--line); }
 .identity-rule { display: block; width: 24px; height: 2px; background: var(--blue); margin-top: 37px; }
 .small-note { color: var(--muted); font-size: .875rem; line-height: 1.65; margin-top: 16px; }
