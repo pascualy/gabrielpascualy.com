@@ -7,7 +7,7 @@ const posts = await publishedPosts();
   <section class="writing-section" aria-labelledby="writing-title">
     <div class="section-heading">
       <h1 id="writing-title">Writing</h1>
-      <span class="section-caption">Essays & working notes</span>
+      <a class="feed-link" href={pathFor('rss.xml')}>RSS feed</a>
     </div>
     <ol class="post-list">
       {posts.map((post) => (

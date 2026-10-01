@@ -29,9 +29,9 @@ img { display: block; max-width: 100%; }
 .portrait { width: 104px; height: 104px; object-fit: cover; border-radius: 8px; margin-bottom: 25px; filter: saturate(.8); }
 .name { display: block; font-family: var(--serif); font-size: 2.35rem; letter-spacing: -.055em; line-height: 1.12; font-weight: 400; }
 .name-period { color: var(--blue); }
-.role { font-size: .9375rem; line-height: 1.65; margin: 23px 0 9px; }
+.role { font-size: .9375rem; line-height: 1.65; margin: 9px 0 0; }
 .role a { text-decoration-color: #9ca7ba; }
-.identity-note { color: var(--muted); font-size: .9375rem; line-height: 1.65; margin: 0; max-width: 22ch; }
+.identity-note { color: var(--muted); font-size: .9375rem; line-height: 1.65; margin: 23px 0 0; max-width: 22ch; }
 .social-links { display: flex; gap: 17px; margin-top: 26px; font-size: .875rem; }
 .social-links a { text-decoration: none; border-bottom: 1px solid var(--line); }
 .identity-rule { display: block; width: 24px; height: 2px; background: var(--blue); margin-top: 37px; }
@@ -40,16 +40,15 @@ img { display: block; max-width: 100%; }
 .site-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); min-height: 43px; gap: 20px; }
 .site-header nav { display: flex; gap: 26px; }
 .site-header a { text-decoration: none; color: var(--muted); font-size: .875rem; padding: 0 0 15px; }
-.site-header a[aria-current='page'] { color: var(--ink); border-bottom: 2px solid var(--blue); margin-bottom: -1px; }
 .site-header a:hover { color: var(--blue); }
-.feed-link { font-family: var(--mono); font-size: .8125rem !important; }
-.writing-section { padding-top: 44px; }
+.feed-link { font-family: var(--mono); font-size: .8125rem !important; color: var(--muted); text-decoration: none; }
+.feed-link:hover { color: var(--blue); }
+.writing-section { padding-top: 2px; }
 .eyebrow { font-family: var(--mono); font-size: .75rem; letter-spacing: .085em; line-height: 1.8; color: var(--muted); margin: 0 0 20px; }
 h1, h2, h3, p { overflow-wrap: break-word; }
 h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 4.2vw, 3.45rem); line-height: 1.12; letter-spacing: -.045em; margin: 0; }
 .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
 .section-heading h1 { margin: 0; font-family: var(--sans); font-size: 1rem; font-weight: 500; line-height: 1.65; letter-spacing: normal; }
-.section-caption { font-family: var(--mono); font-size: .75rem; color: var(--muted); }
 .post-list { list-style: none; margin: 0; padding: 0; }
 .post-list li { border-bottom: 1px solid var(--line); }
 .post-link { display: block; padding: 27px 0 30px; text-decoration: none; }
@@ -105,16 +104,14 @@ h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 4.2vw
   .portrait { width: 62px; height: 62px; margin: 0; border-radius: 6px; }
   .name { font-size: 1.7rem; line-height: 1.2; letter-spacing: -.04em; }
   .desktop-break { display: none; }
-  .role { margin: 15px 0 5px; }
-  .identity-note { max-width: none; font-size: .875rem; }
+  .role { margin: 5px 0 0; }
+  .identity-note { max-width: none; font-size: .875rem; margin-top: 15px; }
   .social-links { margin-top: 15px; }
   .identity-rule, .small-note { display: none; }
   .site-header { min-height: 45px; }
   .site-header a { min-height: 44px; padding-top: 8px; }
-  .writing-section { padding-top: 28px; }
   h1 { font-size: clamp(2.15rem, 8.3vw, 3.1rem); }
   .eyebrow { font-size: .75rem; letter-spacing: .04em; margin-bottom: 17px; }
-  .section-caption { font-size: .75rem; }
   .post-link h3 { font-size: 1.6rem; }
   .work-note { margin-top: 35px; padding-left: 19px; }
   .site-footer { margin-top: 48px; }

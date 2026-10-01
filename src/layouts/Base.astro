@@ -14,6 +14,7 @@ const {
   article = false, date,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const isHome = Astro.url.pathname === pathFor();
 ---
 <!doctype html>
 <html lang="en">
@@ -46,8 +47,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           <img src={pathFor('images/gabriel-pascualy.png')} alt="Gabriel Pascualy" width="460" height="460" class="portrait" fetchpriority="high" />
           <span class="name">Gabriel<br class="desktop-break" /> Pascualy<span class="name-period">.</span></span>
         </a>
+        <p class="identity-note">Product, AI, developer tools, and how teams work.</p>
         <p class="role">Building <a href="https://www.ketryx.com/">Ketryx</a></p>
-        <p class="identity-note">I’m curious about how people build things—and how AI changes the way they work.</p>
         <div class="social-links">
           <a href="https://x.com/gpascualy">Twitter / X</a>
           <a href="https://github.com/pascualy">GitHub</a>
@@ -57,12 +58,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       </aside>
 
       <div class="content-column">
-        <header class="site-header">
+        {!isHome && <header class="site-header">
           <nav aria-label="Main navigation">
-            <a href={pathFor()} aria-current={Astro.url.pathname === pathFor() ? 'page' : undefined}>Writing</a>
+            <a href={pathFor()}>Writing</a>
           </nav>
           <a class="feed-link" href={pathFor('rss.xml')}>RSS feed</a>
-        </header>
+        </header>}
         <main id="main"><slot /></main>
         <footer class="site-footer">
           <span>© {new Date().getFullYear()} Gabriel Pascualy</span>
